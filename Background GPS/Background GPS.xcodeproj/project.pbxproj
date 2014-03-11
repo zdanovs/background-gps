@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C182A3318CF969F001BFA6D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A3118CF969F001BFA6D /* Model.xcdatamodeld */; };
+		7C182A3618CF96FD001BFA6D /* Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A3518CF96FD001BFA6D /* Coordinates.m */; };
+		7C182A3B18CFA23B001BFA6D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C182A3A18CFA23B001BFA6D /* CoreData.framework */; };
+		7C182A3F18CFAC11001BFA6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C182A3E18CFAC11001BFA6D /* InfoPlist.strings */; };
+		7C182A4218CFACD1001BFA6D /* Background GPS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C182A4118CFACD1001BFA6D /* Background GPS-Info.plist */; };
+		7C182A4418CFACF5001BFA6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A4318CFACF5001BFA6D /* main.m */; };
+		7CDF051D18C90C6A00E2FA4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDF051C18C90C6A00E2FA4A /* Foundation.framework */; };
+		7CDF051F18C90C6A00E2FA4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDF051E18C90C6A00E2FA4A /* CoreGraphics.framework */; };
+		7CDF052118C90C6A00E2FA4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDF052018C90C6A00E2FA4A /* UIKit.framework */; };
+		7CDF052D18C90C6A00E2FA4A /* BGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF052C18C90C6A00E2FA4A /* BGAppDelegate.m */; };
+		7CDF053018C90C6A00E2FA4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF052E18C90C6A00E2FA4A /* Main.storyboard */; };
+		7CDF053518C90C6A00E2FA4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF053418C90C6A00E2FA4A /* Images.xcassets */; };
+		7CDF055318C9106100E2FA4A /* BGMainTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF055218C9106100E2FA4A /* BGMainTVC.m */; };
+		7CDF055618C9108E00E2FA4A /* BGLocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */; };
+		7CDF055818C913C800E2FA4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDF055718C913C800E2FA4A /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C182A3218CF969F001BFA6D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7C182A3418CF96FD001BFA6D /* Coordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinates.h; sourceTree = "<group>"; };
+		7C182A3518CF96FD001BFA6D /* Coordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinates.m; sourceTree = "<group>"; };
+		7C182A3A18CFA23B001BFA6D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C182A3E18CFAC11001BFA6D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = ../en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C182A4018CFACB3001BFA6D /* Background GPS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Background GPS-Prefix.pch"; path = "Background GPS/Background GPS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		7C182A4118CFACD1001BFA6D /* Background GPS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Background GPS-Info.plist"; path = "Background GPS/Background GPS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7C182A4318CFACF5001BFA6D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Background GPS/main.m"; sourceTree = SOURCE_ROOT; };
+		7CDF051918C90C6A00E2FA4A /* Background GPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Background GPS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDF051C18C90C6A00E2FA4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7CDF051E18C90C6A00E2FA4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CDF052018C90C6A00E2FA4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7CDF052B18C90C6A00E2FA4A /* BGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGAppDelegate.h; sourceTree = "<group>"; };
+		7CDF052C18C90C6A00E2FA4A /* BGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGAppDelegate.m; sourceTree = "<group>"; };
+		7CDF052F18C90C6A00E2FA4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7CDF053418C90C6A00E2FA4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7CDF053B18C90C6A00E2FA4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7CDF055118C9106100E2FA4A /* BGMainTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMainTVC.h; sourceTree = "<group>"; };
+		7CDF055218C9106100E2FA4A /* BGMainTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMainTVC.m; sourceTree = "<group>"; };
+		7CDF055418C9108E00E2FA4A /* BGLocationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGLocationTableViewCell.h; sourceTree = "<group>"; };
+		7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGLocationTableViewCell.m; sourceTree = "<group>"; };
+		7CDF055718C913C800E2FA4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CDF051618C90C6A00E2FA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C182A3B18CFA23B001BFA6D /* CoreData.framework in Frameworks */,
+				7CDF055818C913C800E2FA4A /* CoreLocation.framework in Frameworks */,
+				7CDF051F18C90C6A00E2FA4A /* CoreGraphics.framework in Frameworks */,
+				7CDF052118C90C6A00E2FA4A /* UIKit.framework in Frameworks */,
+				7CDF051D18C90C6A00E2FA4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C182A3718CF971B001BFA6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C182A3118CF969F001BFA6D /* Model.xcdatamodeld */,
+				7C182A3418CF96FD001BFA6D /* Coordinates.h */,
+				7C182A3518CF96FD001BFA6D /* Coordinates.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C182A3818CF9725001BFA6D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CDF055118C9106100E2FA4A /* BGMainTVC.h */,
+				7CDF055218C9106100E2FA4A /* BGMainTVC.m */,
+				7C182A3918CF972F001BFA6D /* Cell */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7C182A3918CF972F001BFA6D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CDF055418C9108E00E2FA4A /* BGLocationTableViewCell.h */,
+				7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		7CDF051018C90C6A00E2FA4A = {
+			isa = PBXGroup;
+			children = (
+				7CDF052218C90C6A00E2FA4A /* Background GPS */,
+				7CDF051B18C90C6A00E2FA4A /* Frameworks */,
+				7CDF051A18C90C6A00E2FA4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CDF051A18C90C6A00E2FA4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CDF051918C90C6A00E2FA4A /* Background GPS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CDF051B18C90C6A00E2FA4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C182A3A18CFA23B001BFA6D /* CoreData.framework */,
+				7CDF055718C913C800E2FA4A /* CoreLocation.framework */,
+				7CDF051C18C90C6A00E2FA4A /* Foundation.framework */,
+				7CDF051E18C90C6A00E2FA4A /* CoreGraphics.framework */,
+				7CDF052018C90C6A00E2FA4A /* UIKit.framework */,
+				7CDF053B18C90C6A00E2FA4A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CDF052218C90C6A00E2FA4A /* Background GPS */ = {
+			isa = PBXGroup;
+			children = (
+				7CDF052E18C90C6A00E2FA4A /* Main.storyboard */,
+				7CDF052B18C90C6A00E2FA4A /* BGAppDelegate.h */,
+				7CDF052C18C90C6A00E2FA4A /* BGAppDelegate.m */,
+				7C182A3818CF9725001BFA6D /* View Controllers */,
+				7C182A3718CF971B001BFA6D /* Model */,
+				7CDF053418C90C6A00E2FA4A /* Images.xcassets */,
+				7CDF052318C90C6A00E2FA4A /* Supporting Files */,
+			);
+			path = "Background GPS";
+			sourceTree = "<group>";
+		};
+		7CDF052318C90C6A00E2FA4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C182A4318CFACF5001BFA6D /* main.m */,
+				7C182A3E18CFAC11001BFA6D /* InfoPlist.strings */,
+				7C182A4118CFACD1001BFA6D /* Background GPS-Info.plist */,
+				7C182A4018CFACB3001BFA6D /* Background GPS-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CDF051818C90C6A00E2FA4A /* Background GPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CDF054B18C90C6A00E2FA4A /* Build configuration list for PBXNativeTarget "Background GPS" */;
+			buildPhases = (
+				7CDF051518C90C6A00E2FA4A /* Sources */,
+				7CDF051618C90C6A00E2FA4A /* Frameworks */,
+				7CDF051718C90C6A00E2FA4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Background GPS";
+			productName = "Background GPS";
+			productReference = 7CDF051918C90C6A00E2FA4A /* Background GPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CDF051118C90C6A00E2FA4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BG;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Andrey Zhdanov";
+				TargetAttributes = {
+					7CDF051818C90C6A00E2FA4A = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7CDF051418C90C6A00E2FA4A /* Build configuration list for PBXProject "Background GPS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CDF051018C90C6A00E2FA4A;
+			productRefGroup = 7CDF051A18C90C6A00E2FA4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CDF051818C90C6A00E2FA4A /* Background GPS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CDF051718C90C6A00E2FA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDF053518C90C6A00E2FA4A /* Images.xcassets in Resources */,
+				7C182A3F18CFAC11001BFA6D /* InfoPlist.strings in Resources */,
+				7C182A4218CFACD1001BFA6D /* Background GPS-Info.plist in Resources */,
+				7CDF053018C90C6A00E2FA4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CDF051518C90C6A00E2FA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDF055318C9106100E2FA4A /* BGMainTVC.m in Sources */,
+				7CDF055618C9108E00E2FA4A /* BGLocationTableViewCell.m in Sources */,
+				7C182A3318CF969F001BFA6D /* Model.xcdatamodeld in Sources */,
+				7C182A3618CF96FD001BFA6D /* Coordinates.m in Sources */,
+				7C182A4418CFACF5001BFA6D /* main.m in Sources */,
+				7CDF052D18C90C6A00E2FA4A /* BGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7CDF052E18C90C6A00E2FA4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CDF052F18C90C6A00E2FA4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CDF054918C90C6A00E2FA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CDF054A18C90C6A00E2FA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CDF054C18C90C6A00E2FA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Background GPS/Background GPS-Prefix.pch";
+				INFOPLIST_FILE = "Background GPS/Background GPS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7CDF054D18C90C6A00E2FA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Background GPS/Background GPS-Prefix.pch";
+				INFOPLIST_FILE = "Background GPS/Background GPS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CDF051418C90C6A00E2FA4A /* Build configuration list for PBXProject "Background GPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CDF054918C90C6A00E2FA4A /* Debug */,
+				7CDF054A18C90C6A00E2FA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CDF054B18C90C6A00E2FA4A /* Build configuration list for PBXNativeTarget "Background GPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CDF054C18C90C6A00E2FA4A /* Debug */,
+				7CDF054D18C90C6A00E2FA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C182A3118CF969F001BFA6D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C182A3218CF969F001BFA6D /* Model.xcdatamodel */,
+			);
+			currentVersion = 7C182A3218CF969F001BFA6D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7CDF051118C90C6A00E2FA4A /* Project object */;
+}
