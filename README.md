@@ -14,7 +14,7 @@ This demo project was created to test collecting GPS coordinates while iOS app i
 4. Go back to application and switch on switcher in upper toolbar
 5. Now you can collect coordinates while application is in background!
 
-![alt text](https://dl.dropboxusercontent.com/u/56913841/background-app-refresh.png "How to find «Background App Refresh»")
+![alt text](http://esmu.lv/background-app-refresh.png "How to find «Background App Refresh»")
 
 ## More
 You can adjust coordinates update distance by going to `BGMainTVC.m` and in `ViewDidLoad` method change `distanceFilter` property for `self.locationManager` (1.0f == 1 meter).
