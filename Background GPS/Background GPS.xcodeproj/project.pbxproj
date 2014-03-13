@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C182A3318CF969F001BFA6D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A3118CF969F001BFA6D /* Model.xcdatamodeld */; };
-		7C182A3618CF96FD001BFA6D /* Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A3518CF96FD001BFA6D /* Coordinates.m */; };
+		7C182A3618CF96FD001BFA6D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C182A3518CF96FD001BFA6D /* Location.m */; };
 		7C182A3B18CFA23B001BFA6D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C182A3A18CFA23B001BFA6D /* CoreData.framework */; };
 		7C182A3F18CFAC11001BFA6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C182A3E18CFAC11001BFA6D /* InfoPlist.strings */; };
 		7C182A4218CFACD1001BFA6D /* Background GPS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C182A4118CFACD1001BFA6D /* Background GPS-Info.plist */; };
@@ -20,14 +20,13 @@
 		7CDF053018C90C6A00E2FA4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF052E18C90C6A00E2FA4A /* Main.storyboard */; };
 		7CDF053518C90C6A00E2FA4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF053418C90C6A00E2FA4A /* Images.xcassets */; };
 		7CDF055318C9106100E2FA4A /* BGMainTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF055218C9106100E2FA4A /* BGMainTVC.m */; };
-		7CDF055618C9108E00E2FA4A /* BGLocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */; };
 		7CDF055818C913C800E2FA4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDF055718C913C800E2FA4A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C182A3218CF969F001BFA6D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		7C182A3418CF96FD001BFA6D /* Coordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinates.h; sourceTree = "<group>"; };
-		7C182A3518CF96FD001BFA6D /* Coordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinates.m; sourceTree = "<group>"; };
+		7C182A3418CF96FD001BFA6D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		7C182A3518CF96FD001BFA6D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		7C182A3A18CFA23B001BFA6D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C182A3E18CFAC11001BFA6D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = ../en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C182A4018CFACB3001BFA6D /* Background GPS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Background GPS-Prefix.pch"; path = "Background GPS/Background GPS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -44,8 +43,6 @@
 		7CDF053B18C90C6A00E2FA4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7CDF055118C9106100E2FA4A /* BGMainTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMainTVC.h; sourceTree = "<group>"; };
 		7CDF055218C9106100E2FA4A /* BGMainTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMainTVC.m; sourceTree = "<group>"; };
-		7CDF055418C9108E00E2FA4A /* BGLocationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGLocationTableViewCell.h; sourceTree = "<group>"; };
-		7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGLocationTableViewCell.m; sourceTree = "<group>"; };
 		7CDF055718C913C800E2FA4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -69,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				7C182A3118CF969F001BFA6D /* Model.xcdatamodeld */,
-				7C182A3418CF96FD001BFA6D /* Coordinates.h */,
-				7C182A3518CF96FD001BFA6D /* Coordinates.m */,
+				7C182A3418CF96FD001BFA6D /* Location.h */,
+				7C182A3518CF96FD001BFA6D /* Location.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,18 +77,8 @@
 			children = (
 				7CDF055118C9106100E2FA4A /* BGMainTVC.h */,
 				7CDF055218C9106100E2FA4A /* BGMainTVC.m */,
-				7C182A3918CF972F001BFA6D /* Cell */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		7C182A3918CF972F001BFA6D /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				7CDF055418C9108E00E2FA4A /* BGLocationTableViewCell.h */,
-				7CDF055518C9108E00E2FA4A /* BGLocationTableViewCell.m */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 		7CDF051018C90C6A00E2FA4A = {
@@ -227,9 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CDF055318C9106100E2FA4A /* BGMainTVC.m in Sources */,
-				7CDF055618C9108E00E2FA4A /* BGLocationTableViewCell.m in Sources */,
 				7C182A3318CF969F001BFA6D /* Model.xcdatamodeld in Sources */,
-				7C182A3618CF96FD001BFA6D /* Coordinates.m in Sources */,
+				7C182A3618CF96FD001BFA6D /* Location.m in Sources */,
 				7C182A4418CFACF5001BFA6D /* main.m in Sources */,
 				7CDF052D18C90C6A00E2FA4A /* BGAppDelegate.m in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  Coordinates.h
+//  Location.h
 //  Background GPS
 //
 //  Created by Andrey Zhdanov on 11/03/14.
@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Coordinates : NSManagedObject
+@interface Location : NSManagedObject
 
 @property (nonatomic, retain) NSDate    *timestamp;
 @property (nonatomic, retain) NSNumber  *latitude;

@@ -6,9 +6,14 @@
 //  Copyright (c) 2014 Andrey Zhdanov. All rights reserved.
 //
 
-#import "BGMainTVC.h"
-#import "Coordinates.h"
+#define kLocationCellIdentifier @"LocationCell"
+#define kLocationEntityName     @"Location"
+#define kTimeAttributeName      @"timestamp"
+
 #import "BGAppDelegate.h"
+#import "BGMainTVC.h"
+#import "Location.h"
+
 
 @interface BGMainTVC () <CLLocationManagerDelegate>
 
@@ -26,7 +31,6 @@
     
     BGAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
-    
     [self populateSavedLocations];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -42,10 +46,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"LocationCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kLocationCellIdentifier forIndexPath:indexPath];
     
-    Coordinates *location = self.locations[indexPath.row];
+    Location *location = self.locations[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%f, %f", location.latitude.floatValue, location.longitude.floatValue];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -57,27 +60,24 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
-    Coordinates *location = (Coordinates *)[NSEntityDescription insertNewObjectForEntityForName:@"Coordinates"
-                                                                                     inManagedObjectContext:managedObjectContext];
+    Location *location = (Location *)[NSEntityDescription insertNewObjectForEntityForName:kLocationEntityName
+                                                                   inManagedObjectContext:managedObjectContext];
     
     location.timestamp = newLocation.timestamp;
     location.longitude = [NSNumber numberWithFloat:newLocation.coordinate.longitude];
-    location.latitude = [NSNumber numberWithFloat:newLocation.coordinate.latitude];
+    location.latitude  = [NSNumber numberWithFloat:newLocation.coordinate.latitude];
     
     NSError *error = nil;
     if (![managedObjectContext save:&error]) {
         NSLog(@"Error in adding a new location %@, %@", error, [error userInfo]);
         abort();
+    } else {
+        [self.locations insertObject:location atIndex:0];
     }
-    
-    // Also add to our map so we can remove old values later
-    [self.locations insertObject:location atIndex:0];
-    
     
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive) {
         [self.tableView reloadData];
-    }
-    else {
+    } else {
         NSLog(@"App is backgrounded. New location is %@", newLocation);
     }
 }
@@ -97,7 +97,7 @@
 
 - (IBAction)clearAllButtonTapped:(id)sender {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity:[NSEntityDescription entityForName:@"Coordinates" inManagedObjectContext:self.managedObjectContext]];
+    [fetchRequest setEntity:[NSEntityDescription entityForName:kLocationEntityName inManagedObjectContext:self.managedObjectContext]];
     [fetchRequest setIncludesPropertyValues:NO];
     
     NSArray *receivedLocations = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
@@ -114,9 +114,9 @@
 
 - (void)populateSavedLocations {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc]initWithKey:@"timestamp" ascending:NO];
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc]initWithKey:kTimeAttributeName ascending:NO];
     fetchRequest.sortDescriptors = @[descriptor];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Coordinates" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kLocationEntityName inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
